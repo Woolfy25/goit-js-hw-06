@@ -13,25 +13,13 @@ const images = [
   },
 ];
 
-const imagesList = document.querySelector(".gallery");
+const list = document.querySelector(".gallery");
 
 const markup = images
   .map(
-    (images) => `<li"><img src="${images.url}" alt="${images.alt}></img></li>`
+    (img) =>
+      `<li><img src="${img.url}" alt="${img.alt}" width="500" height="500"></li>`
   )
   .join("");
 
-imagesList.insertAdjacentHTML("afterbegin", markup);
-
-// const listPrime = images.map((images) => {
-//   const list = document.createElement("li");
-//   const image = document.createElement("img");
-//   list.appendChild(image);
-
-//   image.src = images.url;
-//   image.alt = images.alt;
-
-//   return list;
-// });
-
-// imagesList.append(...listPrime);
+list.insertAdjacentHTML("beforeend", markup);

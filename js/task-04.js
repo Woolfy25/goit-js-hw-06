@@ -1,14 +1,15 @@
-let counterValue = 0;
+const incrementBtn = document.querySelector("#increment");
+const decrementBtn = document.querySelector("#decrement");
+const value = document.querySelector("#value");
 
-const display = document.querySelector(`#value`);
-const decrement = document.querySelector('button[data-action="decrement"]');
-const increment = document.querySelector('button[data-action="increment"]');
+let counterDisplay = 0;
 
-decrement.addEventListener("click", function () {
-  counterValue--;
-  display.textContent = counterValue;
+incrementBtn.addEventListener("click", function () {
+  counterDisplay += 1;
+  value.innerHTML = counterDisplay;
 });
-increment.addEventListener("click", function () {
-  counterValue++;
-  display.textContent = counterValue;
+
+decrementBtn.addEventListener("click", function () {
+  counterDisplay -= 1;
+  value.innerHTML = counterDisplay;
 });

@@ -1,9 +1,9 @@
-const input = document.getElementById("validation-input");
+const input = document.querySelector("#validation-input");
 
 input.addEventListener("blur", () => {
-  const maxLength = parseInt(input.getAttribute("data-length"));
+  const max = parseInt(input.getAttribute("data-length"));
 
-  if (input.value.length === maxLength) {
+  if (input.value.length >= max) {
     input.classList.remove("invalid");
     input.classList.add("valid");
   } else {

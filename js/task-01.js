@@ -1,47 +1,19 @@
-function NumberOfCategories() {
-  return document.querySelector("#categories").children.length;
-}
+const categ = document.querySelector("#categories");
+const items = document.querySelector(".item");
 
-function firstCategory() {
-  const firstName =
-    document.querySelector("#categories").firstElementChild.firstElementChild
-      .innerHTML;
-  const firstCat =
-    document.querySelector("#categories").firstElementChild.lastElementChild
-      .children.length;
+console.log("Number of categories:", categ.children.length);
 
-  const result = `Category: ${firstName}, Elements:  ${firstCat}`;
+console.log("Category:", items.firstElementChild.innerHTML);
+console.log("Elements:", items.lastElementChild.children.length);
 
-  return result;
-}
+console.log("Category:", items.nextElementSibling.firstElementChild.innerHTML);
+console.log(
+  "Elements:",
+  items.nextElementSibling.lastElementChild.children.length
+);
 
-function secondCategory() {
-  const firstName =
-    document.querySelector("#categories").firstElementChild.nextElementSibling
-      .firstElementChild.innerHTML;
-  const firstCat =
-    document.querySelector("#categories").firstElementChild.nextElementSibling
-      .lastElementChild.children.length;
-
-  const result = `Category: ${firstName}, Elements:  ${firstCat}`;
-
-  return result;
-}
-
-function thirdCategory() {
-  const firstName =
-    document.querySelector("#categories").lastElementChild.firstElementChild
-      .innerHTML;
-  const firstCat =
-    document.querySelector("#categories").lastElementChild.lastElementChild
-      .children.length;
-
-  const result = `Category: ${firstName}, Elements:  ${firstCat}`;
-
-  return result;
-}
-
-console.log("Number of categories: ", NumberOfCategories());
-console.log(firstCategory());
-console.log(secondCategory());
-console.log(thirdCategory());
+console.log("Category:", categ.lastElementChild.firstElementChild.innerHTML);
+console.log(
+  "Elements:",
+  categ.lastElementChild.lastElementChild.children.length
+);
